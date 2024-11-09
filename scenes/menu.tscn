@@ -1,0 +1,320 @@
+[gd_scene load_steps=31 format=3 uid="uid://unfnrh80b8fy"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_ia7yf"]
+[ext_resource type="Texture2D" uid="uid://bg4syft15jcs1" path="res://assets/spirites/textures/menubackground.jpg" id="2_8a83t"]
+[ext_resource type="Texture2D" uid="uid://1j7jqesv0676" path="res://assets/spirites/textures/pixil-frame-0.png" id="3_oon2b"]
+[ext_resource type="AudioStream" uid="uid://lyfaeh8x85gm" path="res://assets/spirites/sounds/menu.mp3" id="4_cy5fm"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_esudm"]
+
+[sub_resource type="Theme" id="Theme_8n3y6"]
+Button/colors/font_color = Color(0.991599, 0.985343, 0.983316, 1)
+Button/colors/font_disabled_color = Color(0.633534, 0.95223, 0.850709, 0.5)
+Button/colors/font_hover_color = Color(0.757964, 0.0828307, 0.565346, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 16
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3ak4"]
+
+[sub_resource type="Theme" id="Theme_edwf5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48d6j"]
+bg_color = Color(0.733333, 0.345098, 0.482353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6evi3"]
+bg_color = Color(1, 0.866667, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5e1f6"]
+bg_color = Color(0.901961, 0.607843, 0.698039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bhkg"]
+bg_color = Color(0.733333, 0.345098, 0.482353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0eeg"]
+bg_color = Color(1, 0.866667, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgin7"]
+bg_color = Color(0.901961, 0.607843, 0.698039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jttvd"]
+bg_color = Color(0.733333, 0.345098, 0.482353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glulq"]
+bg_color = Color(1, 0.866667, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6g2ae"]
+bg_color = Color(0.901961, 0.607843, 0.698039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvilv"]
+bg_color = Color(0.733333, 0.345098, 0.482353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1308q"]
+bg_color = Color(1, 0.866667, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64op8"]
+bg_color = Color(0.901961, 0.607843, 0.698039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqy4o"]
+bg_color = Color(0.733333, 0.345098, 0.482353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srfig"]
+bg_color = Color(1, 0.866667, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2o0n"]
+bg_color = Color(0.901961, 0.607843, 0.698039, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1jyg0"]
+line_spacing = 10.0
+font_size = 90
+outline_size = 10
+outline_color = Color(0.8, 0.48, 0.741333, 1)
+shadow_size = 10
+shadow_color = Color(0.8, 0.48, 0.741333, 1)
+
+[sub_resource type="Animation" id="Animation_o2n7p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-141, 261)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.326377]
+}
+
+[sub_resource type="Animation" id="Animation_jlx8i"]
+resource_name = "new_animation"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.66667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-141, 261), Vector2(400, 370), Vector2(807, 250), Vector2(1413, 560)]
+}
+
+[sub_resource type="Animation" id="Animation_yfcvj"]
+resource_name = "new_animation_2"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 5.03333, 7, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1005, -45), Vector2(945, 81), Vector2(1024, 284), Vector2(864, 500), Vector2(1005, 820)]
+}
+
+[sub_resource type="Animation" id="Animation_fy5nw"]
+resource_name = "new_animation_3"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-141, 261), Vector2(91, 147), Vector2(200, 29), Vector2(344, -92)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_4h2x8"]
+resource_name = "new_animation_4"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(740, 719), Vector2(924, 509), Vector2(1045, 404), Vector2(1262, 205)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pq3ei"]
+_data = {
+"RESET": SubResource("Animation_o2n7p"),
+"new_animation": SubResource("Animation_jlx8i"),
+"new_animation_2": SubResource("Animation_yfcvj"),
+"new_animation_3": SubResource("Animation_fy5nw"),
+"new_animation_4": SubResource("Animation_4h2x8")
+}
+
+[node name="Menu" type="Control"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_esudm")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8n3y6")
+script = ExtResource("1_ia7yf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -92.0
+offset_right = 160.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+texture = ExtResource("2_8a83t")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m3ak4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = -113.0
+offset_right = 117.0
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_edwf5")
+
+[node name="Wiosna" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_48d6j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6evi3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5e1f6")
+text = "Wiosna"
+
+[node name="Lato" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_6bhkg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m0eeg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgin7")
+text = "Lato"
+
+[node name="Jesien" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_jttvd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_glulq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6g2ae")
+text = "Jesień"
+
+[node name="Zima" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_vvilv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1308q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_64op8")
+text = "Zima"
+
+[node name="Zima2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_vvilv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1308q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_64op8")
+text = "Menu Główne"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_xqy4o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_srfig")
+theme_override_styles/normal = SubResource("StyleBoxFlat_k2o0n")
+text = "Wyjscie"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -199.0
+offset_top = 70.0
+offset_right = 168.0
+offset_bottom = 194.0
+grow_horizontal = 2
+text = "Nostalgic Jump"
+label_settings = SubResource("LabelSettings_1jyg0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-141, 261)
+rotation = 0.326377
+texture = ExtResource("3_oon2b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_pq3ei")
+}
+autoplay = "new_animation_3"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_cy5fm")
+volume_db = 10.0
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Wiosna" to="." method="_on_wiosna_pressed"]
+[connection signal="pressed" from="VBoxContainer/Lato" to="." method="_on_lato_pressed"]
+[connection signal="pressed" from="VBoxContainer/Jesien" to="." method="_on_jesien_pressed"]
+[connection signal="pressed" from="VBoxContainer/Zima" to="." method="_on_zima_pressed"]
+[connection signal="pressed" from="VBoxContainer/Zima2" to="." method="_on_MenuGlowne_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

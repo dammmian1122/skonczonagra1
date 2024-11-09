@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://e73qj3e21c4d"]
+
+[ext_resource type="Texture2D" uid="uid://cboq0j2smuk2n" path="res://assets/spirites/textures/pixil-frame-0 (2)-imageonline.co-merged (1).png" id="1_e0bgc"]
+[ext_resource type="Script" path="res://scripts/coin_2.gd" id="1_mdcad"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xitam"]
+atlas = ExtResource("1_e0bgc")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e8f6"]
+atlas = ExtResource("1_e0bgc")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipncg"]
+atlas = ExtResource("1_e0bgc")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2x4y"]
+atlas = ExtResource("1_e0bgc")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1mev"]
+atlas = ExtResource("1_e0bgc")
+region = Rect2(800, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_117o8"]
+atlas = ExtResource("1_e0bgc")
+region = Rect2(1000, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ear77"]
+atlas = ExtResource("1_e0bgc")
+region = Rect2(1200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnrqf"]
+atlas = ExtResource("1_e0bgc")
+region = Rect2(1400, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_75usg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xitam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e8f6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipncg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2x4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1mev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_117o8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ear77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnrqf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kvore"]
+radius = 69.029
+
+[node name="Coin2" type="Area2D"]
+scale = Vector2(0.1, 0.1)
+collision_mask = 2
+script = ExtResource("1_mdcad")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_75usg")
+autoplay = "default"
+frame_progress = 0.457836
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-29, 16)
+shape = SubResource("CircleShape2D_kvore")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

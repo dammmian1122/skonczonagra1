@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dadvkd5ktgdgu"]
+
+[ext_resource type="Texture2D" uid="uid://ctyy6tilbmu5l" path="res://assets/spirites/textures/pixil-frame-0 (7).png" id="1_dduoe"]
+
+[node name="meta" type="Sprite2D"]
+position = Vector2(75, 117)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_dduoe")

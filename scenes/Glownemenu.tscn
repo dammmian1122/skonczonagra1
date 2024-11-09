@@ -1,0 +1,208 @@
+[gd_scene load_steps=19 format=3 uid="uid://ngg45r2ch13j"]
+
+[ext_resource type="Script" path="res://scripts/glownemenu.gd" id="1_dxaeb"]
+[ext_resource type="Texture2D" uid="uid://b57bx0xh0h0an" path="res://assets/spirites/textures/MainMenuBgc.jpg" id="1_f44bg"]
+[ext_resource type="AudioStream" uid="uid://lyfaeh8x85gm" path="res://assets/spirites/sounds/menu.mp3" id="4_yyes7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_esudm"]
+
+[sub_resource type="Theme" id="Theme_8n3y6"]
+Button/colors/font_color = Color(0.991599, 0.985343, 0.983316, 1)
+Button/colors/font_disabled_color = Color(0.633534, 0.95223, 0.850709, 0.5)
+Button/colors/font_hover_color = Color(0.757964, 0.0828307, 0.565346, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 16
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3ak4"]
+
+[sub_resource type="Theme" id="Theme_edwf5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqy4o"]
+bg_color = Color(0.733333, 0.345098, 0.482353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srfig"]
+bg_color = Color(1, 0.866667, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2o0n"]
+bg_color = Color(0.901961, 0.607843, 0.698039, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1jyg0"]
+line_spacing = 10.0
+font_size = 90
+outline_size = 10
+outline_color = Color(0.8, 0.48, 0.741333, 1)
+shadow_size = 10
+shadow_color = Color(0.8, 0.48, 0.741333, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qdlrp"]
+font_size = 49
+font_color = Color(1, 0.542972, 0.994417, 1)
+outline_size = 10
+outline_color = Color(0.829922, 0.0176759, 0.243887, 1)
+shadow_color = Color(0.72549, 0.152941, 0.52549, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48d6j"]
+bg_color = Color(0.733333, 0.345098, 0.482353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6evi3"]
+bg_color = Color(1, 0.866667, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5e1f6"]
+bg_color = Color(0.901961, 0.607843, 0.698039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bhkg"]
+bg_color = Color(0.733333, 0.345098, 0.482353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0eeg"]
+bg_color = Color(1, 0.866667, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgin7"]
+bg_color = Color(0.901961, 0.607843, 0.698039, 1)
+
+[node name="GlowneMenu" type="Control"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_esudm")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8n3y6")
+script = ExtResource("1_dxaeb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -92.0
+offset_right = 160.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+texture = ExtResource("1_f44bg")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m3ak4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -103.5
+offset_top = -89.0
+offset_right = 103.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_edwf5")
+
+[node name="Wyjscie" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/align_to_largest_stylebox = 100
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_xqy4o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_srfig")
+theme_override_styles/normal = SubResource("StyleBoxFlat_k2o0n")
+text = "Wyjscie"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -183.5
+offset_right = 183.5
+offset_bottom = 124.0
+grow_horizontal = 2
+text = "PixelBay"
+label_settings = SubResource("LabelSettings_1jyg0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.5
+offset_top = -172.0
+offset_right = 139.5
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wybierz grę"
+label_settings = SubResource("LabelSettings_qdlrp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -504.0
+offset_top = -38.5
+offset_right = 504.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="NostalgicJump" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/align_to_largest_stylebox = 300
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_48d6j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6evi3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5e1f6")
+text = "Nostalgic Jump"
+icon_alignment = 1
+
+[node name="SpaceInvaders" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/align_to_largest_stylebox = 100
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_6bhkg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m0eeg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgin7")
+text = "Space Invaders
+"
+
+[node name="Auta" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/align_to_largest_stylebox = 100
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_6bhkg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m0eeg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lgin7")
+text = "Petrolhead Spirit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(72, 285.5)
+stream = ExtResource("4_yyes7")
+volume_db = 10.0
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Wyjscie" to="." method="_on_wyjscie_pressed"]
+[connection signal="pressed" from="HBoxContainer/NostalgicJump" to="." method="_on_nostalgic_jump_pressed"]
+[connection signal="pressed" from="HBoxContainer/SpaceInvaders" to="." method="_on_space_invaders_pressed"]
+[connection signal="pressed" from="HBoxContainer/Auta" to="." method="_on_auta_pressed"]
